@@ -4,6 +4,22 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+const modal = document.querySelector('#modal')
+modal.classList.add("hidden")
+
+addEventListener("DOMContentLoaded", heartClicker())
+
+function heartClicker (event) {
+  fetch(`mimicServerCall`)
+  .then(res => {
+    res = document.querySelector('.like').innerHTML
+    res.addEventListener('click', () => {
+      console.log(res);
+    }
+    )
+  })
+}
+
 
 
 
